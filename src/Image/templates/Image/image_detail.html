@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head_title %} Image | {{block.super}} {% endblock head_title %}
+
+{% block content %}
+
+<p><a href="/">Назад</a></p>
+
+<img src="{{object.image_file.url}}" alt="{{object.image_file}}">
+
+<p><b>Размер:</b> {{object.image_file.size}} байт</p>
+
+<form action="">
+	<p>
+		<label for="width">Ширина:</label>
+		<input type="text" id="width" name="width" placeholder="Введите высоту">
+	</p>
+	<p>
+		<label for="height">Высота:</label>
+		<input type="text" id="height" name="height" placeholder="Введите ширинну">
+	</p>
+	<p>
+		<label for="size">Размер:</label>
+		<input type="text" id="size" name="size" placeholder="Введите размер в байтах">
+	</p>
+	<p><input type="submit" value="Изменить"></p>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block head_title %} Create | {{block.super}} {% endblock head_title %}
+
+{% block content %}
+	<p><a href="/">Назад</a></p>
+	<h1>Добавить изображение</h1>
+	{% include 'snippets/form-snippets.html' %}
+{% endblock content %}

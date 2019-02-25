@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head_title %} Images | {{block.super}} {% endblock head_title %}
+
+{% block content %}
+
+<a href="{% url 'image:create' %}">Upload image</a>
+
+<ul>
+{% for obj in object_list %}
+	<li>
+		<a href="{{obj.get_absolute_url}}">{{obj.id}}</a>
+	</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}
